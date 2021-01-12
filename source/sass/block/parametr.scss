@@ -1,0 +1,117 @@
+.parametr__content {
+  z-index: 5;
+}
+
+.parametr__field {
+  margin-bottom: 4.5%;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.parametr__select {
+  position: relative;
+
+  select {
+    background: linear-gradient(360deg, #f3f3f3 0%, rgba(243, 243, 243, 0) 100%);
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    appearance: none;
+    padding: 15px 50px 11px 14px;
+    text-indent: 5px;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+
+    @include text-sets(18px,25px);
+  }
+
+  option {
+    color: #323232;
+
+    @include text-sets(16px,21px);
+
+    &:checked {
+      background-color: #3b81d7;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba(59, 129, 215, 0.15);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/arrow-down.svg");
+    top: 0;
+    width: 10px;
+    height: 5px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 20px;
+    color: #d7d7d7;
+  }
+}
+
+.parametr__button {
+  display: block;
+  margin: 0;
+  width: 100px;
+  padding: 20px 0;
+  position: relative;
+  box-shadow: -3px 2px 4px rgba(0, 0, 0, 0.25);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13%;
+    right: -22%;
+    width: 47px;
+    height: 48px;
+    background: linear-gradient(180deg, #818387 0%, #696b6f 100%);
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  &--active {
+    &::after {
+      background: linear-gradient(180deg, #4892ec 0%, #2f79d4 100%);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-right: none;
+    padding-bottom: 19px;
+    padding-top: 19px;
+
+    &::after {
+      outline: none;
+      width: 45px;
+      height: 46px;
+      right: -23%;
+      top: 13.2%;
+      background: linear-gradient(0deg, #3e8ff2, #3e8ff2);
+    }
+  }
+
+  &:active {
+    &::after {
+      outline: none;
+      background: linear-gradient(0deg, #256fca, #256fca);
+    }
+  }
+}

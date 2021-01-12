@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  @include text-sets(18px, 25px);
+  padding: 0;
+  margin: 0;
+  min-width: $width-mobile;
+  font-family: "Open Sans", "Arial", sans-serif;
+  box-sizing: border-box;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/bg@2x.png");
+  }
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}

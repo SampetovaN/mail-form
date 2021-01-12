@@ -1,0 +1,28 @@
+.button {
+  @include text-sets(18px, 25px);
+  color: #ffffff;
+  background: linear-gradient(180deg, #818387 0%, #696b6f 100%);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  font-family: inherit;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &--active {
+    background: linear-gradient(180deg, #4892ec 0%, #2f79d4 100%);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: linear-gradient(0deg, #3e8ff2, #3e8ff2);
+    border: 1px solid #3789ec;
+  }
+
+  &:active {
+    outline: none;
+    background: linear-gradient(0deg, #256fca, #256fca);
+  }
+}

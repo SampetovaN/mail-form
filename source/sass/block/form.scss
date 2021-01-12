@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+  padding: 5% 10%;
+  min-width: 300px;
+  margin: 10% auto;
+  background-color: #ffffff;
+
+  h2 {
+    text-align: center;
+  }
+
+  fieldset {
+    border: none;
+    outline: none;
+  }
+
+  ul {
+    @include list-refresh;
+  }
+}
+
+
+.form__button {
+  display: block;
+  padding-left: 8px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+
+  @media (max-width: $width-tablet) {
+    padding-bottom: 15px;
+  }
+}
