@@ -1,4 +1,5 @@
 .field {
+  position: relative;
   input {
     background: linear-gradient(180deg, #f8f8f8 0%, rgba(243, 243, 243, 0) 100%, #f2f2f2 100%);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -15,13 +16,38 @@
       border: 1px solid #4892ec;
     }
 
-    &--error {
-      border: 1px solid $error;
-    }
-
     &::placeholder {
       @include text-sets(18px, 25px);
       color: #838383;
     }
   }
+  &--success {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/check.svg");
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 14px;
+    }
+  }
+  &--error {
+     input {
+       border: 1px solid $error;
+       background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
+       box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    &::after {
+      content: "Неверно заполнено поле";
+      position: absolute;
+      color: #c98e99;
+
+      @include text-sets(13px, 17px);
+      bottom: -28%;
+      left: 1%;
+    }
+  }
+
 }

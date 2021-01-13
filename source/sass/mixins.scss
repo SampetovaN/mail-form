@@ -46,3 +46,8 @@
     color: rgba($color, 0.3);
   }
 }
+
+@mixin border-bottom ($num) {
+  border-bottom-left-radius: $num;
+  border-bottom-right-radius: $num;
+}

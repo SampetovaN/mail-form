@@ -1,0 +1,20 @@
+.personal {
+  p {
+    text-align: center;
+  }
+
+}
+.personal__field {
+  margin-bottom: 4.5%;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.personal__button {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 150px;
+}

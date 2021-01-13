@@ -2,7 +2,7 @@
   "name": "buyform",
   "version": "1.0.0",
   "private": true,
-  "description": "Форма для заказа товара",
+  "description": "Форма для заказа забора",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
@@ -30,7 +30,8 @@
     "stylelint-config-standard": "^20.0.0",
     "svgstore": "^3.0.0-2",
     "webpack": "^5.12.2",
-    "webpack-stream": "^6.1.1"
+    "webpack-stream": "^6.1.1",
+    "gulp-concat": "^2.6.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -57,5 +58,7 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vanilla-js-dropdown": "^2.2.0"
+  }
 }

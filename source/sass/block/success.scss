@@ -1,3 +1,18 @@
 .success {
   background-color: #ffffff;
+  width: 84%;
+  padding: 5% 10%;
+  min-width: 300px;
+  margin: 10% auto;
+  h2 {
+    @include text-sets(26px,35px)
+  }
+  p {
+    @include text-sets(18px,25px)
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
 }

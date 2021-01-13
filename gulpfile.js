@@ -16,6 +16,7 @@ var replace = require('gulp-replace');
 var webpack = require('webpack');
 var webpackStream = require('webpack-stream');
 var webpackConfig = require('./webpack.config.js');
+var concat = require('gulp-concat');
 
 
 gulp.task('clean', function () {
@@ -56,7 +57,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-  return gulp.src('source/sass/style.scss')
+  return gulp.src(['source/sass/style.scss'])
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -65,6 +66,7 @@ gulp.task('css', function () {
     ]))
     .pipe(gulp.dest('build/css'))
     .pipe(csso())
+    .pipe(concat('node_modules/vanilla-js-dropdown/vanilla-js-dropdown.css'))
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))

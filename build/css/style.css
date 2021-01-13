@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
   ========================================================================== */
@@ -327,7 +328,6 @@ a {
   text-decoration: none; }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"],
 input[type="radio"],
 .visually-hidden {
   position: absolute;
@@ -418,46 +418,14 @@ input[type="radio"],
 
 .parametr__select {
   position: relative; }
-  .parametr__select select {
-    background: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), to(rgba(243, 243, 243, 0)));
-    background: linear-gradient(360deg, #f3f3f3 0%, rgba(243, 243, 243, 0) 100%);
-    border: 1px solid #d7d7d7;
-    border-radius: 3px;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    padding: 15px 50px 11px 14px;
-    text-indent: 5px;
-    outline: none;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: normal; }
-  .parametr__select option {
-    color: #323232;
-    font-size: 16px;
-    line-height: 21px;
-    font-weight: normal; }
-    .parametr__select option:checked {
-      background-color: #3b81d7; }
-    .parametr__select option:hover, .parametr__select option:focus {
-      background-color: rgba(59, 129, 215, 0.15); }
-  .parametr__select::after {
+  .parametr__select--success::after {
     content: "";
     position: absolute;
-    background-image: url("../img/arrow-down.svg");
+    background-image: url("../img/check.svg");
     top: 0;
-    width: 10px;
-    height: 5px; }
-  .parametr__select::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 20px;
-    color: #d7d7d7; }
+    left: 0;
+    width: 18px;
+    height: 14px; }
 
 .parametr__button {
   display: block;
@@ -502,46 +470,170 @@ input[type="radio"],
     background: -webkit-gradient(linear, left bottom, left top, from(#256fca), to(#256fca));
     background: linear-gradient(0deg, #256fca, #256fca); }
 
-.field input {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), color-stop(100%, rgba(243, 243, 243, 0)), to(#f2f2f2));
-  background: linear-gradient(180deg, #f8f8f8 0%, rgba(243, 243, 243, 0) 100%, #f2f2f2 100%);
-  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
-  border: 1px solid #d7d7d7;
-  cursor: pointer;
-  padding-left: 33px;
-  padding-top: 14px;
-  padding-bottom: 13px; }
-  .field input:hover, .field input:focus, .field input:active {
-    border: 1px solid #4892ec; }
-  .field input--error {
-    border: 1px solid #a10031; }
-  .field input::-webkit-input-placeholder {
-    font-size: 18px;
-    line-height: 25px;
+.parametr__checkbox input {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), to(rgba(243, 243, 243, 0)));
+  background: linear-gradient(360deg, #f3f3f3 0%, rgba(243, 243, 243, 0) 100%);
+  border: 1px solid #d7d7d7; }
+
+.field {
+  position: relative; }
+  .field input {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), color-stop(100%, rgba(243, 243, 243, 0)), to(#f2f2f2));
+    background: linear-gradient(180deg, #f8f8f8 0%, rgba(243, 243, 243, 0) 100%, #f2f2f2 100%);
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    border: 1px solid #d7d7d7;
+    cursor: pointer;
+    padding-left: 33px;
+    padding-top: 14px;
+    padding-bottom: 13px; }
+    .field input:hover, .field input:focus, .field input:active {
+      border: 1px solid #4892ec; }
+    .field input::-webkit-input-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: normal;
+      color: #838383; }
+    .field input::-moz-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: normal;
+      color: #838383; }
+    .field input:-ms-input-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: normal;
+      color: #838383; }
+    .field input::-ms-input-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: normal;
+      color: #838383; }
+    .field input::placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: normal;
+      color: #838383; }
+  .field--success::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/check.svg");
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 14px; }
+  .field--error input {
+    border: 1px solid #a10031;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F8F8F8), color-stop(100%, rgba(243, 243, 243, 0)), to(#F2F2F2));
+    background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
+    -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15); }
+  .field--error::after {
+    content: "Неверно заполнено поле";
+    position: absolute;
+    color: #c98e99;
+    font-size: 13px;
+    line-height: 17px;
     font-weight: normal;
-    color: #838383; }
-  .field input::-moz-placeholder {
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: normal;
-    color: #838383; }
-  .field input:-ms-input-placeholder {
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: normal;
-    color: #838383; }
-  .field input::-ms-input-placeholder {
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: normal;
-    color: #838383; }
-  .field input::placeholder {
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: normal;
-    color: #838383; }
+    bottom: -28%;
+    left: 1%; }
 
 .sum {
   color: #a10031; }
+
+.personal p {
+  text-align: center; }
+
+.personal__field {
+  margin-bottom: 4.5%; }
+  .personal__field input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+.personal__button {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 150px; }
+
+.success {
+  background-color: #ffffff;
+  width: 84%;
+  padding: 5% 10%;
+  min-width: 300px;
+  margin: 10% auto; }
+  .success h2 {
+    font-size: 26px;
+    line-height: 35px;
+    font-weight: normal; }
+  .success p {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal; }
+  .success h2,
+  .success p {
+    text-align: center; }
+
+.js-Dropdown-title {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), to(rgba(243, 243, 243, 0)));
+  background: linear-gradient(360deg, #f3f3f3 0%, rgba(243, 243, 243, 0) 100%);
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 15px 50px 11px 14px;
+  text-indent: 5px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal; }
+  .js-Dropdown-title::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    width: 10px;
+    height: 5px; }
+  .js-Dropdown-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 20px;
+    color: #d7d7d7; }
+
+.js-Dropdown-list {
+  display: none;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+  .js-Dropdown-list.is-open {
+    display: block; }
+  .js-Dropdown-list li {
+    color: #323232;
+    border: 1px solid #d7d7d7;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: normal;
+    padding: 10px;
+    border-top: none;
+    cursor: pointer; }
+    .js-Dropdown-list li:hover, .js-Dropdown-list li:focus {
+      background: rgba(59, 129, 215, 0.15); }
+    .js-Dropdown-list li:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+  .js-Dropdown-list .is-selected {
+    background-color: #3b81d7; }
+    .js-Dropdown-list .is-selected:hover, .js-Dropdown-list .is-selected:focus {
+      background-color: #3b81d7; }
