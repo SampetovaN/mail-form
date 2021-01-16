@@ -58,7 +58,5 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {
-    "vanilla-js-dropdown": "^2.2.0"
-  }
+  "dependencies": {}
 }

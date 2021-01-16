@@ -18,11 +18,11 @@ body {
   background-image: url("../img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #646464;
 
   @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
     background-image: url("../img/bg@2x.png");
   }
-  background-color: #ffffff;
 }
 
 a {

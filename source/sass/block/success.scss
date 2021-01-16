@@ -1,18 +1,45 @@
 .success {
   background-color: #ffffff;
-  width: 84%;
-  padding: 5% 10%;
+  width: 64%;
   min-width: 300px;
-  margin: 10% auto;
-  h2 {
-    @include text-sets(26px,35px)
+  margin: 14% 19% 14% auto;
+  padding: 5% 4% 2%;
+
+  @media (max-width: $width-tablet) {
+    margin: 14% auto;
   }
+
+  position: relative;
+
+  h2 {
+    @include text-sets(26px,35px, 700);
+    margin: 0 0 9%;
+  }
+
   p {
-    @include text-sets(18px,25px)
+    @include text-sets(18px,25px);
+    padding: 0 8%;
   }
 
   h2,
   p {
     text-align: center;
+  }
+}
+
+.success__close {
+  position: absolute;
+
+  @include move-button;
+  top: -8%;
+  right: 0;
+
+  &:focus,
+  &:hover {
+    color: rgba(#ffffff, 0.7);
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
   }
 }

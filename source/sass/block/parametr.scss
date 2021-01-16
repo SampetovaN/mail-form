@@ -1,49 +1,73 @@
+.parametr {
+  h2 {
+    text-align: center;
+  }
+}
 
 .parametr__content {
   z-index: 5;
+
+  p {
+    @include text-sets(24px, 32px);
+  }
+}
+
+.parametr__size {
+  ul {
+    @include list-refresh;
+    padding: 0 5%;
+  }
 }
 
 .parametr__field {
-  margin-bottom: 4.5%;
+  margin-bottom: 8.5%;
+}
+
+.parametr__input {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
 
   input {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
+    margin-right: auto;
+    margin-top: 2%;
 
-.parametr__select {
-  position: relative;
-  &--success {
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url("../img/check.svg");
-      top: 0;
-      left: 0;
-      width: 18px;
-      height: 14px;
+    @media (min-width: $width-desktop) {
+      margin-right: 8%;
     }
   }
+
+  span {
+    @include text-sets(18px, 24px);
+  }
 }
 
+.parametr__material {
+  padding-left: 4%;
+  padding-right: 2%;
 
+  h3 {
+    @include text-sets(18px,24px);
+    margin-bottom: 2%;
+  }
+}
 
 .parametr__button {
   display: block;
-  margin: 0;
-  width: 100px;
-  padding: 20px 0;
+  width: 125px;
+  padding: 15px 0 10px;
   position: relative;
   box-shadow: -3px 2px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 0 0 2%;
 
   &::after {
     content: "";
     position: absolute;
-    top: 13%;
-    right: -22%;
-    width: 47px;
-    height: 48px;
+    top: 14%;
+    right: -14%;
+    width: 38px;
+    height: 35px;
     background: linear-gradient(180deg, #818387 0%, #696b6f 100%);
     border-left: 2px solid transparent;
     border-bottom: 2px solid transparent;
@@ -61,15 +85,14 @@
   &:hover,
   &:focus {
     border-right: none;
-    padding-bottom: 19px;
-    padding-top: 19px;
+    padding: 13px 0 10px;
 
     &::after {
       outline: none;
-      width: 45px;
-      height: 46px;
-      right: -23%;
-      top: 13.2%;
+      top: 12%;
+      right: -14%;
+      width: 38px;
+      height: 35px;
       background: linear-gradient(0deg, #3e8ff2, #3e8ff2);
     }
   }
@@ -79,13 +102,5 @@
       outline: none;
       background: linear-gradient(0deg, #256fca, #256fca);
     }
-  }
-}
-
-.parametr__checkbox {
-
-  input {
-    background: linear-gradient(360deg, #f3f3f3 0%, rgba(243, 243, 243, 0) 100%);
-    border: 1px solid #d7d7d7;
   }
 }

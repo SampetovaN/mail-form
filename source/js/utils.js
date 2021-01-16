@@ -66,7 +66,7 @@
   };
 
 })();
-/*function mask(evt) {
+/* function mask(evt) {
 
   var matrix = "+7 (___) ___ ____",
 

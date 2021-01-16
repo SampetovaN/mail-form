@@ -1,14 +1,20 @@
 .field {
   position: relative;
+
   input {
     background: linear-gradient(180deg, #f8f8f8 0%, rgba(243, 243, 243, 0) 100%, #f2f2f2 100%);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     border: 1px solid #d7d7d7;
     cursor: pointer;
-    padding-left: 33px;
-    padding-top: 14px;
-    padding-bottom: 13px;
+    padding-left: 18px;
+    padding-top: 23px;
+    padding-bottom: 14px;
+    width: 76%;
+
+    @media (max-width: $width-tablet) {
+      width: 61%;
+    }
 
     &:hover,
     &:focus,
@@ -21,22 +27,24 @@
       color: #838383;
     }
   }
+
   &--success {
     &::after {
       content: "";
       position: absolute;
       background-image: url("../img/check.svg");
-      top: 0;
-      left: 0;
-      width: 18px;
-      height: 14px;
+      top: 54%;
+      right: -16%;
+      width: 21px;
+      height: 18px;
     }
   }
+
   &--error {
-     input {
-       border: 1px solid $error;
-       background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
-       box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+    input {
+      border: 1px solid $error;
+      background: linear-gradient(180deg, #f8f8f8 0%, rgba(243, 243, 243, 0) 100%, #f2f2f2 100%);
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
     }
 
     &::after {
@@ -45,9 +53,8 @@
       color: #c98e99;
 
       @include text-sets(13px, 17px);
-      bottom: -28%;
-      left: 1%;
+      bottom: -20%;
+      left: -1%;
     }
   }
-
 }

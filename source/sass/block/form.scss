@@ -1,23 +1,28 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 84%;
-  padding: 5% 10%;
+  width: 64%;
   min-width: 300px;
-  margin: 10% auto;
   background-color: #ffffff;
+  margin: 14% auto 12% 17%;
+  padding: 2% 10% 7.1%;
+
+  @media (max-width: $width-tablet) {
+    margin: 12% auto auto;
+    width: 85%;
+  }
 
   h2 {
-    text-align: center;
+    @include text-sets(32px, 40px);
+    margin-bottom: 7%;
+  }
+
+  label {
+    @include text-sets(18px, 24px);
   }
 
   fieldset {
-    border: none;
-    outline: none;
-  }
-
-  ul {
-    @include list-refresh;
+    @include refresh-fieldset;
   }
 }
 

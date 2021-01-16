@@ -1,8 +1,8 @@
-@import "normalize";
-@import "fonts";
-@import "variables";
-@import "mixins";
-@import "global";
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
 @import "block/visually-hidden.scss";
 @import "block/button.scss";
 @import "block/blue-text.scss";
@@ -12,4 +12,5 @@
 @import "block/sum.scss";
 @import "block/personal.scss";
 @import "block/success.scss";
-@import "block/js-Dropdown.scss";
+@import "block/material.scss";
+@import "block/checkbox.scss";

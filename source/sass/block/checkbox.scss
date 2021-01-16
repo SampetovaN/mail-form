@@ -1,0 +1,47 @@
+.checkbox__label {
+  @include text-sets(18px, 24px);
+  padding-left: 25px;
+  position: relative;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    + .checkbox__indicator {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: linear-gradient(360deg, #f3f3f3 0%, rgba(243, 243, 243, 0) 100%);
+      border: 1px solid #d7d7d7;
+      border-radius: 3px;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      + .checkbox__indicator {
+        border: solid 1px rgba(#d7d7d7, 0.7);
+      }
+    }
+
+    &:active {
+      + .checkbox__indicator {
+        opacity: 0.3;
+      }
+    }
+
+    &:checked {
+      + .checkbox__indicator {
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url("../img/tick.svg");
+          background-repeat: no-repeat;
+          width: 12px;
+          height: 9px;
+          top: 3px;
+          left: 1px;
+        }
+      }
+    }
+  }
+}

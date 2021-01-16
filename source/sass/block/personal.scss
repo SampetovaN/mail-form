@@ -1,20 +1,89 @@
 .personal {
-  p {
+  padding: 2% 4% 7.1%;
+  position: relative;
+
+  h2 {
+    margin-bottom: 5%;
     text-align: center;
   }
 
+  ul {
+    @include list-refresh;
+  }
 }
+
+.personal__back {
+  position: absolute;
+
+  @include move-button;
+  top: -4%;
+  left: 3%;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/arrow-back.svg");
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 9px;
+    top: 5px;
+    left: -14px;
+  }
+
+  &:focus,
+  &:hover {
+    color: rgba(#ffffff, 0.7);
+
+    &::before {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.personal__content {
+  padding: 0 14%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    color: #c98e99;
+
+    @include text-sets(13px, 17px);
+    bottom: -20%;
+    left: -1%;
+  }
+}
+
 .personal__field {
-  margin-bottom: 4.5%;
+  margin-bottom: 11%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   input {
     width: 100%;
     box-sizing: border-box;
   }
 }
+
 .personal__button {
   display: block;
   margin: 0 auto;
-  padding: 20px 0;
-  width: 150px;
+  padding: 12px 0;
+  width: 74%;
+}
+
+.personal__details {
+  @include text-sets(18px, 25px);
+  padding-right: 8%;
 }
